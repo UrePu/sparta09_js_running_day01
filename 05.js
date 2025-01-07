@@ -13,9 +13,7 @@ function calcNum(x, sign, y) {
   }
 }
 
-for (let i = 0; i < scores.length; i++) {
-  scores[i] = calcNum(scores[i], "+", 3);
-}
+scores.reduce((x) => calcNum(x, "+", 3));
 
 console.log(scores);
 // 기대값: [39, 65, 75, 58, 89, 98, 95, 51, 84]
